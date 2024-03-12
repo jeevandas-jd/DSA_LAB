@@ -50,7 +50,7 @@ ostream& operator <<(ostream& os,Stack<U> M){
     int i;
     os<<endl;
     if(not M.IsEmpty() ) {
-        for (i = 0; i < M.Top; i++) {
+        for (i = 0; i <=M.Top; i++) {
             cout << M.s[i]<<" ";
         }
     }
@@ -64,4 +64,8 @@ void Stack<T>::display() {
             cout << s[i];
         }
     }
+}
+template <class T>
+T Stack<T>::Peek() {
+    return s[Top];
 }
